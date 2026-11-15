@@ -231,7 +231,7 @@ h1,h2,h3{line-height:1.2;margin:0 0 10px}.newb{font-size:10px;font-weight:700;le
     D.sections.forEach(function (s, i) { items.push(['sec' + i, (s.short || s.id) + (s.new ? ' <span class="newb">NEW</span>' : '')]); });
     items.push(['flash', 'Flashcards'], ['tests', 'Practice tests']);
     var cur = S.view === 'section' ? 'sec' + S.sec : (S.view === 'test' || S.view === 'results' ? 'tests' : S.view);
-    $('nav').innerHTML = '<span class="logo">📐 Geometry Ch. 3</span>' + items.map(function (it) {
+    $('nav').innerHTML = '<span class="logo">📐 Geometry Ch. 4</span>' + items.map(function (it) {
       var c = it[0].indexOf('sec') === 0 ? COL[+it[0].slice(3)] : (it[0] === 'flash' ? '#fbbf24' : (it[0] === 'tests' ? '#f472b6' : '#e9ecf3'));
       return '<button class="nb' + (cur === it[0] ? ' on' : '') + '" style="--c:' + c + '" data-act="go" data-to="' + it[0] + '">' + it[1] + '</button>';
     }).join('');
